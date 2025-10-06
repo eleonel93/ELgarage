@@ -1,0 +1,699 @@
+"use client"
+
+import { Shield, Camera, Smartphone, HardDrive, Wifi, Settings, CheckCircle, Star, Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
+import { Label } from '@/components/ui/label'
+
+export default function SecurityCamerasPage() {
+  return (
+    <div className="min-h-screen bg-slate-50">
+      {/* Header */}
+      <header className="bg-white shadow-sm border-b">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center py-4">
+            <div className="flex items-center space-x-2">
+              <Shield className="h-8 w-8 text-blue-600" />
+              <span className="text-2xl font-bold text-gray-900">SecureTech</span>
+            </div>
+            <nav className="hidden md:flex space-x-8">
+              <a href="#servicos" className="text-gray-700 hover:text-blue-600 transition-colors">Serviços</a>
+              <a href="#vantagens" className="text-gray-700 hover:text-blue-600 transition-colors">Vantagens</a>
+              <a href="#galeria" className="text-gray-700 hover:text-blue-600 transition-colors">Galeria</a>
+              <a href="#contacto" className="text-gray-700 hover:text-blue-600 transition-colors">Contacto</a>
+            </nav>
+            <Button className="bg-blue-600 hover:bg-blue-700">
+              <Phone className="w-4 h-4 mr-2" />
+              Ligar Agora
+            </Button>
+          </div>
+        </div>
+      </header>
+
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
+                Proteja o que mais
+                <span className="text-blue-400 block">importa para si</span>
+              </h1>
+              <p className="text-xl text-gray-300 leading-relaxed">
+                Sistemas de videovigilância profissionais para casa e empresa. 
+                Instalação especializada, sem mensalidades, com garantia total.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-4">
+                  Pedir Orçamento Grátis
+                </Button>
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900 text-lg px-8 py-4">
+                  Ver Trabalhos
+                </Button>
+              </div>
+              <div className="flex items-center space-x-6 text-sm">
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <span>Sem mensalidades</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <span>Garantia total</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <span>Suporte 24/7</span>
+                </div>
+              </div>
+            </div>
+            <div className="relative">
+              <img 
+                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop&crop=center" 
+                alt="Sistema de câmeras de segurança instalado"
+                className="rounded-2xl shadow-2xl w-full h-auto"
+              />
+              <div className="absolute -bottom-6 -left-6 bg-white text-gray-900 p-4 rounded-xl shadow-xl">
+                <div className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                  <span className="font-semibold">Sistema Ativo</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Serviços */}
+      <section id="servicos" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Serviços Especializados
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Soluções completas de videovigilância adaptadas às suas necessidades específicas
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <CardContent className="p-8">
+                <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
+                  <Camera className="w-8 h-8 text-blue-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Instalação Profissional</h3>
+                <p className="text-gray-600 mb-6">
+                  Instalação de câmeras de segurança de nível básico e profissional, 
+                  adaptadas ao seu espaço e necessidades específicas.
+                </p>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span>Câmeras HD e 4K</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span>Visão noturna avançada</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span>Resistentes às intempéries</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <CardContent className="p-8">
+                <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mb-6">
+                  <Smartphone className="w-8 h-8 text-green-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Monitorização Remota</h3>
+                <p className="text-gray-600 mb-6">
+                  Acesso completo via computador, telemóvel ou tablet. 
+                  Veja tudo em tempo real, onde quer que esteja.
+                </p>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span>App móvel intuitiva</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span>Alertas em tempo real</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span>Acesso multi-dispositivo</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <CardContent className="p-8">
+                <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mb-6">
+                  <HardDrive className="w-8 h-8 text-purple-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Gravação 24h Local</h3>
+                <p className="text-gray-600 mb-6">
+                  Sistema de gravação contínua local, sem custos de Cloud. 
+                  Os seus dados ficam sempre consigo.
+                </p>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span>Armazenamento local seguro</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span>Sem custos mensais</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span>Backup automático</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <CardContent className="p-8">
+                <div className="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mb-6">
+                  <Wifi className="w-8 h-8 text-orange-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Redes e Wi-Fi</h3>
+                <p className="text-gray-600 mb-6">
+                  Instalação de redes cabladas e extensão de rede Wi-Fi 
+                  para cobertura total do seu espaço.
+                </p>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span>Rede cablada profissional</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span>Extensão Wi-Fi otimizada</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span>Cobertura total garantida</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <CardContent className="p-8">
+                <div className="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center mb-6">
+                  <Settings className="w-8 h-8 text-red-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Suporte Multi-Marca</h3>
+                <p className="text-gray-600 mb-6">
+                  Trabalhamos com várias marcas e oferecemos soluções 
+                  de desempenho otimizado para cada situação.
+                </p>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span>Marcas líderes do mercado</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span>Otimização personalizada</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span>Compatibilidade garantida</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <CardContent className="p-8">
+                <div className="w-16 h-16 bg-indigo-100 rounded-2xl flex items-center justify-center mb-6">
+                  <Shield className="w-8 h-8 text-indigo-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Manutenção Total</h3>
+                <p className="text-gray-600 mb-6">
+                  Suporte técnico completo e manutenção pós-instalação 
+                  para garantir o funcionamento perfeito do sistema.
+                </p>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span>Suporte técnico 24/7</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span>Manutenção preventiva</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span>Atualizações incluídas</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Vantagens */}
+      <section id="vantagens" className="py-20 bg-slate-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">
+              Porque Escolher a SecureTech?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Vantagens exclusivas que fazem a diferença na sua segurança
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-2xl font-bold">0€</span>
+              </div>
+              <h3 className="text-xl font-bold mb-4">Sem Mensalidades</h3>
+              <p className="text-gray-300">
+                Pague apenas uma vez. Sem custos recorrentes, 
+                sem surpresas na fatura.
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Settings className="w-10 h-10" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">Soluções Adaptadas</h3>
+              <p className="text-gray-300">
+                Cada instalação é única. Adaptamos tudo 
+                às características da sua casa ou empresa.
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Shield className="w-10 h-10" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">Alta Fiabilidade</h3>
+              <p className="text-gray-300">
+                Equipamentos de qualidade superior com 
+                garantia total e funcionamento 24/7.
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-20 h-20 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Phone className="w-10 h-10" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">Suporte Completo</h3>
+              <p className="text-gray-300">
+                Suporte técnico especializado e manutenção 
+                pós-instalação sempre disponível.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Galeria */}
+      <section id="galeria" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Trabalhos Realizados
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Veja alguns dos nossos projetos de instalação em casas e empresas
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="relative group overflow-hidden rounded-2xl shadow-lg">
+              <img 
+                src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop" 
+                alt="Instalação residencial"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h4 className="font-bold">Residência Familiar</h4>
+                  <p className="text-sm">Sistema completo com 8 câmeras</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="relative group overflow-hidden rounded-2xl shadow-lg">
+              <img 
+                src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop" 
+                alt="Instalação empresarial"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h4 className="font-bold">Escritório Corporativo</h4>
+                  <p className="text-sm">Monitorização de múltiplos andares</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="relative group overflow-hidden rounded-2xl shadow-lg">
+              <img 
+                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=300&fit=crop" 
+                alt="Instalação comercial"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h4 className="font-bold">Loja Comercial</h4>
+                  <p className="text-sm">Segurança 360° com gravação HD</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="relative group overflow-hidden rounded-2xl shadow-lg">
+              <img 
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop" 
+                alt="Instalação industrial"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h4 className="font-bold">Complexo Industrial</h4>
+                  <p className="text-sm">Sistema robusto para exterior</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="relative group overflow-hidden rounded-2xl shadow-lg">
+              <img 
+                src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&h=300&fit=crop" 
+                alt="Instalação condomínio"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h4 className="font-bold">Condomínio Privado</h4>
+                  <p className="text-sm">Controlo de acessos integrado</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="relative group overflow-hidden rounded-2xl shadow-lg">
+              <img 
+                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop" 
+                alt="Instalação moderna"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h4 className="font-bold">Casa Moderna</h4>
+                  <p className="text-sm">Integração com domótica</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testemunhos */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              O que dizem os nossos clientes
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Testemunhos reais de quem confia na nossa experiência
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="border-0 shadow-lg">
+              <CardContent className="p-8">
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-600 mb-6 italic">
+                  "Excelente serviço! A instalação foi rápida e profissional. 
+                  Agora sinto-me muito mais seguro em casa. Recomendo vivamente!"
+                </p>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                    <span className="font-bold text-blue-600">JM</span>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900">João Martins</h4>
+                    <p className="text-sm text-gray-500">Cliente Residencial</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            
+            <Card className="border-0 shadow-lg">
+              <CardContent className="p-8">
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-600 mb-6 italic">
+                  "Sistema perfeito para a nossa empresa. A qualidade das imagens 
+                  é excelente e o suporte técnico é sempre disponível."
+                </p>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                    <span className="font-bold text-green-600">AS</span>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900">Ana Silva</h4>
+                    <p className="text-sm text-gray-500">Gestora Comercial</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            
+            <Card className="border-0 shadow-lg">
+              <CardContent className="p-8">
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-600 mb-6 italic">
+                  "Preço justo, sem mensalidades e equipamento de qualidade. 
+                  A melhor decisão que tomámos para a segurança da nossa loja."
+                </p>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                    <span className="font-bold text-purple-600">RC</span>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900">Rui Costa</h4>
+                    <p className="text-sm text-gray-500">Proprietário de Loja</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Formulário de Contacto */}
+      <section id="contacto" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                Pedir Orçamento Grátis
+              </h2>
+              <p className="text-xl text-gray-600 mb-8">
+                Conte-nos sobre o seu projeto e receba uma proposta personalizada 
+                sem qualquer compromisso.
+              </p>
+              
+              <div className="space-y-6">
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                    <Phone className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900">Telefone</h4>
+                    <p className="text-gray-600">+351 912 345 678</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                    <Mail className="w-6 h-6 text-green-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900">Email</h4>
+                    <p className="text-gray-600">info@securetech.pt</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
+                    <MapPin className="w-6 h-6 text-purple-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900">Localização</h4>
+                    <p className="text-gray-600">Lisboa, Porto e arredores</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <Card className="border-0 shadow-2xl">
+              <CardContent className="p-8">
+                <form className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <Label htmlFor="nome">Nome *</Label>
+                      <Input id="nome" placeholder="O seu nome" className="mt-2" />
+                    </div>
+                    <div>
+                      <Label htmlFor="telefone">Telefone *</Label>
+                      <Input id="telefone" placeholder="912 345 678" className="mt-2" />
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <Label htmlFor="email">Email *</Label>
+                    <Input id="email" type="email" placeholder="seu@email.com" className="mt-2" />
+                  </div>
+                  
+                  <div>
+                    <Label htmlFor="tipo">Tipo de Projeto</Label>
+                    <select id="tipo" className="w-full mt-2 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                      <option>Residencial</option>
+                      <option>Comercial</option>
+                      <option>Industrial</option>
+                      <option>Outro</option>
+                    </select>
+                  </div>
+                  
+                  <div>
+                    <Label htmlFor="descricao">Descrição do Pedido</Label>
+                    <Textarea 
+                      id="descricao" 
+                      placeholder="Descreva o seu projeto, número de câmeras necessárias, área a cobrir, etc."
+                      className="mt-2 h-32"
+                    />
+                  </div>
+                  
+                  <Button className="w-full bg-blue-600 hover:bg-blue-700 text-lg py-3">
+                    Enviar Pedido de Orçamento
+                  </Button>
+                  
+                  <p className="text-sm text-gray-500 text-center">
+                    Resposta garantida em 24 horas úteis
+                  </p>
+                </form>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Rodapé */}
+      <footer className="bg-slate-900 text-white py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-4 gap-8">
+            <div>
+              <div className="flex items-center space-x-2 mb-6">
+                <Shield className="h-8 w-8 text-blue-400" />
+                <span className="text-2xl font-bold">SecureTech</span>
+              </div>
+              <p className="text-gray-300 mb-6">
+                Especialistas em sistemas de videovigilância para casa e empresa. 
+                Segurança, qualidade e confiança.
+              </p>
+              <div className="flex space-x-4">
+                <a href="#" className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
+                  <Facebook className="w-5 h-5" />
+                </a>
+                <a href="#" className="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center hover:bg-pink-700 transition-colors">
+                  <Instagram className="w-5 h-5" />
+                </a>
+                <a href="#" className="w-10 h-10 bg-blue-700 rounded-full flex items-center justify-center hover:bg-blue-800 transition-colors">
+                  <Linkedin className="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+            
+            <div>
+              <h4 className="text-lg font-bold mb-6">Serviços</h4>
+              <ul className="space-y-3 text-gray-300">
+                <li><a href="#" className="hover:text-white transition-colors">Instalação de Câmeras</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Monitorização Remota</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Gravação Local</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Redes e Wi-Fi</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Manutenção</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="text-lg font-bold mb-6">Empresa</h4>
+              <ul className="space-y-3 text-gray-300">
+                <li><a href="#" className="hover:text-white transition-colors">Sobre Nós</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Trabalhos</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Testemunhos</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Contactos</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Orçamento</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="text-lg font-bold mb-6">Contacto</h4>
+              <div className="space-y-3 text-gray-300">
+                <p className="flex items-center space-x-2">
+                  <Phone className="w-4 h-4" />
+                  <span>+351 912 345 678</span>
+                </p>
+                <p className="flex items-center space-x-2">
+                  <Mail className="w-4 h-4" />
+                  <span>info@securetech.pt</span>
+                </p>
+                <p className="flex items-center space-x-2">
+                  <MapPin className="w-4 h-4" />
+                  <span>Lisboa, Porto e arredores</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="border-t border-gray-700 mt-12 pt-8">
+            <div className="flex flex-col md:flex-row justify-between items-center">
+              <p className="text-gray-400 text-sm">
+                © 2024 SecureTech. Todos os direitos reservados.
+              </p>
+              <div className="flex space-x-6 mt-4 md:mt-0">
+                <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+                  Política de Privacidade
+                </a>
+                <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+                  Termos de Serviço
+                </a>
+                <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+                  Cookies
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  )
+}
